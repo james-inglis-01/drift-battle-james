@@ -1,0 +1,123 @@
+/* css */
+
+body {
+  background-color: rgb(14, 27, 37);
+}
+
+.header {
+  text-align: center;
+  font-size: 9.0rem;
+  color: lime;
+  font-family: 'Condiment', cursive;
+  margin-bottom: 0px;
+  margin-top: 50px;
+}
+
+.sub-header {
+  text-align: center;
+  color: lime;
+  margin-top: 0px;
+  margin-bottom: 15px;
+}
+
+.instructions {
+  text-align: center;
+  color: lime;
+  font-family: 'Montserrat', sans-serif;
+}
+
+.boxes {
+  margin-bottom: 0px;
+}
+
+.item{
+  border-radius: 10px;
+}
+
+.carBox1 {
+  height: 250px;
+  border-radius: 10px;
+  border-color: lime;
+  border-style: solid;
+  margin-top: 25px;
+  margin-bottom: 0px;
+}
+
+.carBox2 {
+  height: 250px;
+  border-radius: 10px;
+  border-color: lime;
+  border-style: solid;
+  margin-top: 25px;
+  margin-bottom: 0px;
+}
+
+.winnerParent {
+  margin-top: 0px;
+}
+
+.winnerChild {
+  height: 250px;
+  border-radius: 10px;
+  border-color: lime;
+  border-style: solid;
+  margin-top: 25px;
+  margin-bottom: 50px;
+}
+
+.battle-btn {
+  background-color: rgb(14, 27, 37); 
+  border: solid;
+  border-color: lime;
+  border-radius: 10px;
+  margin-left: 10px;
+  margin-right: 10px;
+  margin-top: 10px;
+  color: lime;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  font-family: 'Montserrat', sans-serif;
+}
+
+/* flex stuff */
+
+.car-pics {
+  display: -webkit-flex;
+   display: flex;
+   -webkit-flex-direction: row;
+   flex-direction: row;
+   -webkit-align-items: center;
+   align-items: center;
+   -webkit-justify-content: center;
+   justify-content: center;
+}
+
+.item {
+  height: 135px;
+  margin: auto;
+}
+
+.boxes {
+  display: -webkit-flex;
+   display: flex;
+   -webkit-flex-direction: row;
+   flex-direction: row;
+   -webkit-align-items: center;
+   align-items: center;
+   -webkit-justify-content: center;
+   justify-content: center;
+}
+
+.winnerParent {
+  display: -webkit-flex;
+  display: flex;
+  -webkit-flex-direction: row;
+  flex-direction: row;
+  -webkit-align-items: center;
+  align-items: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+}
