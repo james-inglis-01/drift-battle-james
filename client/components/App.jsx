@@ -19,6 +19,7 @@ export default class App extends React.Component {
     this.handleBattle = this.handleBattle.bind(this)
     this.handleClose = this.handleClose.bind(this)
   }
+  
   handleClick(car) {
     if (!this.state.carBox1) {
       return this.setState({
@@ -41,11 +42,11 @@ export default class App extends React.Component {
   }
 
   handleClose(e) {
-    if(e.target.name === 'carBox1') {
+    if (e.target.name === 'carBox1') {
       this.setState({
         carBox1: null
       })
-    }else if(e.target.name === 'carBox2') {
+    } else if (e.target.name === 'carBox2') {
       this.setState({
         carBox2: null
       })
