@@ -1,6 +1,6 @@
 import React from 'react'
 
-import CarInfo from './CarInfo'
+// import CarInfo from './CarInfo'
 
 import cardata from '../carData'
 console.log(cardata)
