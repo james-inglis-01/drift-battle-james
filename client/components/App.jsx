@@ -17,16 +17,17 @@ export default class App extends React.Component {
     }
     this.handleClick = this.handleClick.bind(this)
     this.handleBattle = this.handleBattle.bind(this)
+    this.handleClose = this.handleClose.bind(this)
   }
   handleClick(car) {
     if (!this.state.carBox1) {
       return this.setState({
-        carBox1: car
+        carBox1: car,
       })
     }
     if (!this.state.carBox2) {
       this.setState({
-        carBox2: car
+        carBox2: car,
       })
     }
   }
@@ -37,6 +38,10 @@ export default class App extends React.Component {
     } else {
       this.setState({ winner: this.state.carBox2 })
     }
+  }
+
+  handleClose() {
+    console.log("You pressed the X")
   }
 
   render() {
@@ -57,9 +62,9 @@ export default class App extends React.Component {
           }
         </div>
         <div className='boxes'>
-          {this.state.carBox1 && <img className='carBox1' src={`/images/${this.state.carBox1.image}`} />}
+          {this.state.carBox1 && <div><img className='carBox1' src={`/images/${this.state.carBox1.image}`} /><button className='closeBtn1'>X</button></div>}
           {this.state.carBox1 && this.state.carBox2 && <button onClick={this.handleBattle} className='battle-btn'>Battle!</button>}
-          {this.state.carBox2 && <img className='carBox2' src={`/images/${this.state.carBox2.image}`} />}
+          {this.state.carBox2 && <div><img className='carBox2' src={`/images/${this.state.carBox2.image}`} /><button className='closeBtn2'>X</button></div>}
         </div>
         <div className='winnerParent'>
           {this.state.winner && <img className='winnerChild' src={`/images/${this.state.winner.image}`} />}

@@ -9797,6 +9797,7 @@ var App = function (_React$Component) {
     };
     _this.handleClick = _this.handleClick.bind(_this);
     _this.handleBattle = _this.handleBattle.bind(_this);
+    _this.handleClose = _this.handleClose.bind(_this);
     return _this;
   }
 
@@ -9822,6 +9823,11 @@ var App = function (_React$Component) {
       } else {
         this.setState({ winner: this.state.carBox2 });
       }
+    }
+  }, {
+    key: 'handleClose',
+    value: function handleClose() {
+      console.log("You pressed the X");
     }
   }, {
     key: 'render',
@@ -9862,13 +9868,31 @@ var App = function (_React$Component) {
         _react2.default.createElement(
           'div',
           { className: 'boxes' },
-          this.state.carBox1 && _react2.default.createElement('img', { className: 'carBox1', src: '/images/' + this.state.carBox1.image }),
+          this.state.carBox1 && _react2.default.createElement(
+            'div',
+            null,
+            _react2.default.createElement('img', { className: 'carBox1', src: '/images/' + this.state.carBox1.image }),
+            _react2.default.createElement(
+              'button',
+              { className: 'closeBtn1' },
+              'X'
+            )
+          ),
           this.state.carBox1 && this.state.carBox2 && _react2.default.createElement(
             'button',
             { onClick: this.handleBattle, className: 'battle-btn' },
             'Battle!'
           ),
-          this.state.carBox2 && _react2.default.createElement('img', { className: 'carBox2', src: '/images/' + this.state.carBox2.image })
+          this.state.carBox2 && _react2.default.createElement(
+            'div',
+            null,
+            _react2.default.createElement('img', { className: 'carBox2', src: '/images/' + this.state.carBox2.image }),
+            _react2.default.createElement(
+              'button',
+              { className: 'closeBtn2' },
+              'X'
+            )
+          )
         ),
         _react2.default.createElement(
           'div',
@@ -9940,6 +9964,12 @@ var cardata = [{
   model: 'MX-5',
   image: 'Mazda-MX-5.jpg',
   horsePower: 115
+}, {
+  id: 7,
+  make: 'Honda',
+  model: 'City',
+  image: 'City.jpg',
+  horsePower: 900
 }];
 
 exports.default = cardata;
