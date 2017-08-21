@@ -9824,8 +9824,16 @@ var App = function (_React$Component) {
     }
   }, {
     key: 'handleClose',
-    value: function handleClose() {
-      console.log("You pressed the X");
+    value: function handleClose(e) {
+      if (e.target.name === 'carBox1') {
+        this.setState({
+          carBox1: null
+        });
+      } else if (e.target.name === 'carBox2') {
+        this.setState({
+          carBox2: null
+        });
+      }
     }
   }, {
     key: 'render',
@@ -9872,7 +9880,7 @@ var App = function (_React$Component) {
             _react2.default.createElement('img', { className: 'carBox1', src: '/images/' + this.state.carBox1.image }),
             _react2.default.createElement(
               'button',
-              { className: 'closeBtn1' },
+              { name: 'carBox1', className: 'closeBtn', onClick: this.handleClose },
               'X'
             )
           ),
@@ -9887,7 +9895,7 @@ var App = function (_React$Component) {
             _react2.default.createElement('img', { className: 'carBox2', src: '/images/' + this.state.carBox2.image }),
             _react2.default.createElement(
               'button',
-              { className: 'closeBtn2' },
+              { name: 'carBox2', className: 'closeBtn', onClick: this.handleClose },
               'X'
             )
           )

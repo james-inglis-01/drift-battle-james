@@ -86,19 +86,7 @@ body {
   font-family: 'Montserrat', sans-serif;
 }
 
-.closeBtn1 {
-  background-color: rgb(14, 27, 37);
-  border-color: lime;
-  color: lime;
-  border: solid;
-  font-family: 'Montserrat', sans-serif;
-  border-radius: 50%;
-  position: absolute;
-  right: 10px;
-  top: 35px;
-}
-
-.closeBtn2 {
+.closeBtn {
   background-color: rgb(14, 27, 37);
   border-color: lime;
   color: lime;
