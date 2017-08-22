@@ -40,13 +40,6 @@ const cardata = [
     model: 'MX-5',
     image: 'Mazda-MX-5.jpg',
     horsePower: 115
-  },
-  {
-    id: 7,
-    make: 'Honda',
-    model: 'City',
-    image: 'City.jpg',
-    horsePower: 900
   }
 ]
 
