@@ -70,7 +70,7 @@ export default class App extends React.Component {
           {this.state.carBox2 && <div><img className='carBox2' src={`/images/${this.state.carBox2.image}`} /><button name='carBox2' className='closeBtn' onClick={this.handleClose}>X</button></div>}
         </div>
         <div className='winnerParent'>
-          {this.state.winner && <div> <h1 className='winnerText'{...this.state.winner}>Winner</h1> <img className='winnerChild' src={`/images/${this.state.winner.image}`} /> </div>}
+          {this.state.winner && <div> <h1 className='winnerText'{...this.state.winner}>Winner:</h1> <img className='winnerChild' src={`/images/${this.state.winner.image}`} /> </div>}
         </div>
       </div>
     )

@@ -9906,7 +9906,7 @@ var App = function (_React$Component) {
             _react2.default.createElement(
               'h1',
               _extends({ className: 'winnerText' }, this.state.winner),
-              'Winner'
+              'Winner:'
             ),
             ' ',
             _react2.default.createElement('img', { className: 'winnerChild', src: '/images/' + this.state.winner.image }),
