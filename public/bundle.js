@@ -9757,6 +9757,8 @@ Object.defineProperty(exports, "__esModule", {
   value: true
 });
 
+var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
+
 var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
 
 var _react = __webpack_require__(49);
@@ -9897,7 +9899,19 @@ var App = function (_React$Component) {
         _react2.default.createElement(
           'div',
           { className: 'winnerParent' },
-          this.state.winner && _react2.default.createElement('img', { className: 'winnerChild', src: '/images/' + this.state.winner.image })
+          this.state.winner && _react2.default.createElement(
+            'div',
+            null,
+            ' ',
+            _react2.default.createElement(
+              'h1',
+              _extends({ className: 'winnerText' }, this.state.winner),
+              'Winner'
+            ),
+            ' ',
+            _react2.default.createElement('img', { className: 'winnerChild', src: '/images/' + this.state.winner.image }),
+            ' '
+          )
         )
       );
     }
@@ -9905,19 +9919,6 @@ var App = function (_React$Component) {
 
   return App;
 }(_react2.default.Component);
-
-// handleClose(e) {
-//   if (e.target.name === 'carBox1') {
-//     this.setState({
-//       carBox1: null
-//     })
-//   } else if (e.target.name === 'carBox2') {
-//     this.setState({
-//       carBox2: null
-//     })
-//   }
-// }
-
 
 exports.default = App;
 
